@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encriptador</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <img src="img/Logo.svg" alt="imagen logo" class="logo">
+  </header>
+  <main>
+    <section class="seccion1">
+      <div class="contenedor-cajatexto">
+        <textarea class="cajatexto" name="" id="" rows="10" placeholder="Ingrese el texto aquí"></textarea>
+      </div>
+      <div class="alerta">
+        <img src="img/alerta.svg" alt="imagen alerta">
+        <p>Solo letras minúsculas y sin acento</p>
+      </div>
+      <div class="contenedor-botones">
+        <input type="button" class="btn btn-encriptar" value="Encriptar">
+        <input type="button" class="btn btn-desencriptar" value="Desencriptar">
+      </div>
+    </section>
+    <section class="seccion2">
+      <div class="contenedor-resultado">
+        <p class="texto-resultado"></p>
+      </div>
+      <div class="contenedor-dolly">
+        <img src="img/Muñeco.svg" alt="imagen muñeco" class="dolly">
+      </div>
+      <div class="contenedor-mensaje">
+        <h3>Ningún mensaje fué encontrado</h3>
+        <p>Ingresa el texto que deseas encriptar o desencriptar</p>
+      </div>
+      <div class="contenedor-copiar ocultar">
+        <input type="button" class="btn btn-copiar ocultar" value="Copiar">
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p class="copyright">&copy; Fernando Hernández - 2024</p>
+  </footer>
+  <script src="js/encoder.js"></script>
+</body>
+</html>
