@@ -8,7 +8,23 @@ let contenedorDolly = document.querySelector('.contenedor-dolly');
 
 btnEncriptar.addEventListener('click', encriptar);
 btnDesencriptar.addEventListener('click', desencriptar);
+// Get the textarea element
+const textarea = document.getElementById('cajatexto');
 
+// Add event listener for the input event
+textarea.addEventListener('input', function(event) {
+  // Get the entered text from the textarea
+  let enteredText = event.target.value;
+
+  // Use regular expression to match only alphabetic ASCII characters
+  enteredText = enteredText.replace(/[^a-zñA-ZÑ\s]/g, ''); // Remove non-alphabetic characters
+  enteredText = enteredText.replace(/[A-ZÑ]/g, function(match) {
+      return String.fromCharCode(match.charCodeAt(0) + 32); // Convert uppercase to lowercase
+  });
+
+  // Update the textarea value with the converted text
+  textarea.value = enteredText;
+});
 
 function encriptar() {
   // console.log('Encriptando...');
